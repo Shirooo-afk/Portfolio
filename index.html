@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laurence | Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Full-stack developer crafting modern web experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<canvas id="codeCanvas"></canvas>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <div class="icon">&lt;/&gt;</div>
+      <span>Laurence</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"     class="active" data-section="home">Home</a></li>
+      <li><a href="#about"    data-section="about">About</a></li>
+      <li><a href="#skills"   data-section="skills">Skills</a></li>
+      <li><a href="#projects" data-section="projects">Projects</a></li>
+      <li><a href="#contact"  data-section="contact">Contact</a></li>
+    </ul>
+    <a href="LaurenceApale_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <svg id="iconMenu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="iconClose" style="display:none" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home"     data-section="home"     class="active">Home</a>
+    <a href="#about"    data-section="about">About</a>
+    <a href="#skills"   data-section="skills">Skills</a>
+    <a href="#projects" data-section="projects">Projects</a>
+    <a href="#contact"  data-section="contact">Contact</a>
+    <a href="LaurenceApale_Resume.pdf" target="_blank" rel="noopener" style="margin-top:8px;text-align:center;background:linear-gradient(135deg,#7c3aed,#9333ea);color:#fff;border-radius:12px;font-weight:700;">Resume</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ HERO ═════════════════════════════ -->
+<section id="home">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-inner">
+    <!-- Avatar -->
+    <div class="hero-avatar-wrap">
+      <div class="avatar-container">
+        <div class="avatar-glow"></div>
+        <div class="avatar-ring-1"></div>
+        <div class="avatar-ring-2"></div>
+        <div class="avatar-circle">
+          <span class="avatar-letter">L</span>
+          <div class="avatar-tint"></div>
+        </div>
+        <div class="avatar-badge">
+          <div class="badge-dot"></div>
+          <span>Available for hire</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Laurence<span class="hero-name-dot">.</span></h1>
+      <h2 class="hero-role">
+        <span class="hero-role-slash">/</span>
+        <span class="hero-role-text" id="typewriter"></span><span class="hero-cursor">|</span>
+      </h2>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">
+        I craft high-performance, visually stunning web experiences —
+        turning ideas into digital reality with clean code and thoughtful design.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="LaurenceApale_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+          <svg style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Shirooo-afk/Profile" target="_blank" class="social-btn" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/LaurenceApale/" target="_blank" class="social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.instagram.com/lorensss.zzz/" target="_blank" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-arrow">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </a>
+</section>
+
+<!-- ═══════════════════════════ ABOUT ════════════════════════════ -->
+<section id="about" class="section">
+  <div class="blob" style="width:400px;height:400px;background:rgba(124,58,237,.08);right:-100px;top:30%;"></div>
+  <div class="container">
+    <p class="section-label fade-up">Who I Am</p>
+    <h2 class="section-title fade-up">About <span>Me</span></h2>
+    <div class="section-divider fade-up"></div>
+
+    <div class="about-grid">
+      <!-- Card -->
+      <div class="about-card-wrap fade-up">
+        <div style="position:relative">
+          <div class="about-card-glow"></div>
+          <div class="about-card">
+            <span class="about-card-letter">L</span>
+            <div class="about-dot about-dot-1"></div>
+            <div class="about-dot about-dot-2"></div>
+            <div class="about-dot about-dot-3"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="fade-up" style="transition-delay:.1s">
+        <h3 class="about-heading">Passionate Developer &amp; <span>Creative Thinker</span></h3>
+        <p class="about-text">I'm a full-stack developer with a deep passion for building beautiful, user-friendly web applications. I love turning complex problems into simple, elegant solutions with clean and efficient code.</p>
+        <p class="about-text">When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or leveling up my design skills.</p>
+
+        <div class="about-grid-mini">
+          <div class="about-tag">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Philippines
+          </div>
+          <div class="about-tag">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Remote Ready
+          </div>
+          <div class="about-tag">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Available Now
+          </div>
+          <div class="about-tag">
+            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            BSIT
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+<section id="skills" class="section" style="background:rgba(10,10,15,1)">
+  <div class="blob" style="width:400px;height:400px;background:rgba(79,70,229,.07);left:-80px;top:25%;"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <p class="section-label fade-up">What I Know</p>
+    <h2 class="section-title fade-up">My <span>Skills</span></h2>
+    <div class="section-divider fade-up"></div>
+    <p class="fade-up" style="text-align:center;color:#9ca3af;max-width:520px;margin:0 auto 56px;font-size:.97rem;line-height:1.75">A collection of technologies I've worked with over the years, always learning and adding more to the toolkit.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card skill-fe fade-up">
+        <div class="skill-card-header"><div class="skill-card-bar"></div><h3 class="skill-card-title">Frontend</h3></div>
+        <div class="skill-tags">
+          <span class="skill-badge">HTML5</span>
+          <span class="skill-badge">Bootstrap</span>
+          <span class="skill-badge">Chart.js</span>
+          <span class="skill-badge">Flutter</span>
+          <span class="skill-badge">Figma</span>
+          <span class="skill-badge">Canva</span>
+        </div>
+      </div>
+      <div class="skill-card skill-be fade-up" style="transition-delay:.1s">
+        <div class="skill-card-header"><div class="skill-card-bar"></div><h3 class="skill-card-title">Backend</h3></div>
+        <div class="skill-tags">
+          <span class="skill-badge">C#</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">PHP</span>
+          <span class="skill-badge">Node.js</span>
+          <span class="skill-badge">Laravel</span>
+          <span class="skill-badge">.NET</span>
+          <span class="skill-badge">MySQL</span>
+          <span class="skill-badge">Microsoft SQL Server</span>
+        </div>
+      </div>
+      <div class="skill-card skill-ops fade-up" style="transition-delay:.2s">
+        <div class="skill-card-header"><div class="skill-card-bar"></div><h3 class="skill-card-title">Tools &amp; DevOps</h3></div>
+        <div class="skill-tags">
+          <span class="skill-badge">Azure</span>
+          <span class="skill-badge">Vercel</span>
+          <span class="skill-badge">Cloudflare</span>
+          <span class="skill-badge">Arduino</span>
+          <span class="skill-badge">Cisco</span>
+          <span class="skill-badge">Twilio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ PROJECTS ═════════════════════════ -->
+<section id="projects" class="section">
+  <div class="blob" style="width:400px;height:400px;background:rgba(147,51,234,.07);right:-80px;bottom:20%;"></div>
+  <div class="container">
+    <p class="section-label fade-up">What I've Built</p>
+    <h2 class="section-title fade-up">My <span>Projects</span></h2>
+    <div class="section-divider fade-up"></div>
+    <p class="fade-up" style="text-align:center;color:#9ca3af;max-width:520px;margin:0 auto 32px;font-size:.97rem;line-height:1.75">A selection of things I've built — from side projects to production apps. Always pushing the limits.</p>
+
+    <div class="filter-row fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Web App">Web App</button>
+      <button class="filter-btn" data-filter="Full-Stack">Full-Stack</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card p-red fade-up" data-category="Web App,Full-Stack">
+        <div class="project-thumb project-thumb-img"><span class="project-badge-featured">Featured</span><img src="fetchandgo-preview.png" alt="FetchAndGo Preview" /></div>
+        <div class="project-body">
+          <h3 class="project-title">FetchAndGo</h3>
+          <p class="project-desc">A full-featured car rental web application built with ASP.NET. Handles dynamic data fetching, user interactions, and a clean responsive interface powered by C# and SQL Server.</p>
+          <div class="project-tags"><span class="project-tag">ASP.NET</span><span class="project-tag">C#</span><span class="project-tag">SQL Server</span><span class="project-tag">Bootstrap</span><span class="project-tag">HTML5</span></div>
+          <div class="project-footer">
+            <div class="project-stats">
+              <span>🌐 Web App</span>
+              <span>🧩 Full-Stack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card p-indigo fade-up" data-category="Web App,Full-Stack" style="transition-delay:.08s">
+        <div class="project-thumb project-thumb-img"><span class="project-badge-featured">Featured</span><img src="optiflow-preview.png" alt="OptiFlow Preview" /></div>
+        <div class="project-body">
+          <h3 class="project-title">OptiFlow</h3>
+          <p class="project-desc">A comprehensive manufacturing and production management solution built with ASP.NET. Features product management, cart system, and machine tracking for streamlined operations.</p>
+          <div class="project-tags"><span class="project-tag">ASP.NET</span><span class="project-tag">C#</span><span class="project-tag">SQL Server</span><span class="project-tag">Bootstrap</span><span class="project-tag">HTML5</span></div>
+          <div class="project-footer">
+            <div class="project-stats">
+              <span>🏭 Web App</span>
+              <span>🧩 Full-Stack</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card p-green fade-up" data-category="Web App" style="transition-delay:.16s">
+        <div class="project-thumb project-thumb-img"><img src="excellency-preview.png" alt="Excellency LMS Preview" /></div>
+        <div class="project-body">
+          <h3 class="project-title">Excellency LMS</h3>
+          <p class="project-desc">A Learning Management System built with C#. Features user registration, course management, and a clean academic interface designed for students and educators.</p>
+          <div class="project-tags"><span class="project-tag">C#</span><span class="project-tag">SQL Server</span><span class="project-tag">Bootstrap</span><span class="project-tag">HTML5</span></div>
+          <div class="project-footer">
+            <div class="project-stats"><span>📚 Web App</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CERTIFICATIONS ═════════════════════ -->
+<section id="certifications" class="section" style="background:rgba(10,10,15,1)">
+  <div class="blob" style="width:420px;height:420px;background:rgba(79,70,229,.08);left:-120px;bottom:10%;"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <p class="section-label fade-up">What I've Earned</p>
+    <h2 class="section-title fade-up">My <span>Certifications</span></h2>
+    <div class="section-divider fade-up"></div>
+    <p class="fade-up" style="text-align:center;color:#9ca3af;max-width:520px;margin:0 auto 40px;font-size:.97rem;line-height:1.75">
+      A snapshot of the certifications I've completed. I'll keep this section updated as I continue learning.
+    </p>
+
+    <div class="cert-grid">
+      <a class="cert-card fade-up" href="https://www.credly.com/earner/earned/badge/c6012ea3-8d9e-4b03-bdac-13cdbca19065" target="_blank" rel="noopener">
+        <img src="cert-cybersecurity.png" alt="IT Specialist - Cybersecurity badge" class="cert-badge" />
+        <p class="cert-title">IT Specialist – Cybersecurity</p>
+        <p class="cert-meta">Certiport · Cybersecurity</p>
+      </a>
+      <a class="cert-card fade-up" style="transition-delay:.08s" href="https://www.credly.com/earner/earned/badge/80d8919d-a614-402a-8131-9d178e56126b" target="_blank" rel="noopener">
+        <img src="cert-database.png" alt="IT Specialist - Databases badge" class="cert-badge" />
+        <p class="cert-title">IT Specialist – Databases</p>
+        <p class="cert-meta">Certiport · Databases</p>
+      </a>
+      <a class="cert-card fade-up" style="transition-delay:.16s" href="https://www.credly.com/earner/earned/badge/d1043d94-674d-4bcd-90db-10a9e36bce98" target="_blank" rel="noopener">
+        <img src="cert-htmlcss.png" alt="IT Specialist - HTML and CSS badge" class="cert-badge" />
+        <p class="cert-title">IT Specialist – HTML &amp; CSS</p>
+        <p class="cert-meta">Certiport · Web Development</p>
+      </a>
+      <a class="cert-card fade-up" style="transition-delay:.24s" href="https://www.credly.com/earner/earned/badge/afb0491a-cb3d-435b-93b5-b74d293e56a5" target="_blank" rel="noopener">
+        <img src="cert-network.png" alt="IT Specialist - Network Security badge" class="cert-badge" />
+        <p class="cert-title">IT Specialist – Network Security</p>
+        <p class="cert-meta">Certiport · Network Security</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CONTACT ══════════════════════════ -->
+<section id="contact" class="section">
+  <div class="blob" style="width:500px;height:300px;background:rgba(124,58,237,.07);left:50%;bottom:0;transform:translateX(-50%);border-radius:50%;"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <p class="section-label fade-up">Get In Touch</p>
+    <h2 class="section-title fade-up">Let's <span>Work Together</span></h2>
+    <div class="section-divider fade-up"></div>
+    <p class="fade-up" style="text-align:center;color:#9ca3af;max-width:520px;margin:0 auto 56px;font-size:.97rem;line-height:1.75">Have a project in mind or just want to say hi? My inbox is always open — I'll get back to you as soon as possible.</p>
+
+    <div class="contact-grid">
+      <!-- Left column -->
+      <div class="fade-up">
+        <div class="contact-card">
+          <h3 class="contact-card-title">Contact Info</h3>
+          <div class="contact-item">
+            <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><p class="contact-label">Email</p><p class="contact-value"><a href="mailto:apalelaurence@gmail.com">apalelaurence@gmail.com</a></p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><p class="contact-label">Location</p><p class="contact-value">Philippines</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><p class="contact-label">Phone</p><p class="contact-value"><a href="tel:+639652288999">+63 965 228 8999</a></p></div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3 class="contact-card-title">Find Me Online</h3>
+          <div class="social-row">
+            <a href="https://github.com/Shirooo-afk/Profile" target="_blank" class="social-contact-btn" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+            <a href="https://www.linkedin.com/in/LaurenceApale/" target="_blank" class="social-contact-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://www.instagram.com/lorensss.zzz/" target="_blank" class="social-contact-btn" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+          <p style="font-size:12px;color:#6b7280;margin-top:12px;">Usually respond within 24 hours ✉️</p>
+        </div>
+
+        <div class="avail-badge fade-up">
+          <div class="avail-dot"></div>
+          <span>Available for new projects</span>
+        </div>
+      </div>
+
+      <!-- Right column intentionally left empty (form removed) -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-logo">
+        <div class="icon">&lt;/&gt;</div>
+        <span class="footer-brand-name">Laurence</span>
+      </div>
+      <p class="footer-desc">Full-stack developer crafting modern web experiences with clean code and thoughtful design.</p>
+    </div>
+    <div>
+      <p class="footer-col-title">Quick Links</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Connect</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Shirooo-afk/Profile" target="_blank" class="footer-social"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+        <a href="https://www.linkedin.com/in/LaurenceApale/" target="_blank" class="footer-social"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/lorensss.zzz/" target="_blank" class="footer-social"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+      <p class="footer-email">apalelaurence@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-credit">Built with <span>♥</span> using HTML, CSS &amp; vanilla JS</p>
+    <p class="footer-copy">© 2026 Laurence. All rights reserved.</p>
+    <a href="#home" class="back-top" aria-label="Back to top"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

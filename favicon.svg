@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed" />
+      <stop offset="1" stop-color="#9333ea" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded purple tile -->
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)" />
+
+  <!-- </> glyph, matching logo style -->
+  <path
+    d="M25 22 L17 32 L25 42
+       M39 22 L47 32 L39 42
+       M30 44 L34 20"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="3.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
